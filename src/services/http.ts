@@ -1,6 +1,7 @@
 import axios, { AxiosError, AxiosInstance, AxiosResponse } from 'axios';
 
-const access_key = 'iRymMbi6eQQPxPtLfgGr3fQDq90ofB7A';
+const access_key =
+  process.env.REACT_FIXER_API_KEY || 'iRymMbi6eQQPxPtLfgGr3fQDq90ofB7A';
 class Http {
   client: AxiosInstance;
   constructor() {
