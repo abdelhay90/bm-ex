@@ -1,4 +1,3 @@
-import { useEffect, useState } from 'react';
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -10,8 +9,6 @@ import {
   Legend,
 } from 'chart.js';
 import { Line } from 'react-chartjs-2';
-import CurrencyConverterForm from 'components/CurrencyConverterForm';
-import { Currency, listAllCurrencies, timeseries } from 'services/fixer-api';
 
 ChartJS.register(
   CategoryScale,
