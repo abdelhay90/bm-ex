@@ -14,6 +14,7 @@ export default function RateDetails(): JSX.Element {
     setCurrentRateInfo,
     symbols,
     loading,
+    setLoading,
   } = useContext(DataContext);
 
   const currenctCurrencyName = useMemo(() => {
@@ -38,6 +39,7 @@ export default function RateDetails(): JSX.Element {
 
   const convertAmount = async (values: any) => {
     try {
+      setLoading(true);
       const data = await convert(values.from, values.to, values.amount);
       // @ts-ignore
       const rateInfo = {
@@ -53,6 +55,7 @@ export default function RateDetails(): JSX.Element {
         result: data.result,
       };
       setCurrentRateInfo((prev) => ({ ...rateInfo }));
+      setLoading(false);
     } catch (error) {
       console.error(error);
     }

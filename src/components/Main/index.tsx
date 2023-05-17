@@ -29,6 +29,7 @@ const Main = () => {
 
   const convertCurrency = async (values: any) => {
     try {
+      setLoading(true);
       const data = await convert(values.from, values.to, values.amount);
       // @ts-ignore
       const rateInfo = {
@@ -47,6 +48,7 @@ const Main = () => {
       setLatestCurrencies(latestItems);
       setRateInfo(rateInfo);
       setCurrentRateInfo(rateInfo);
+      setLoading(false);
     } catch (error) {
       console.error(error);
     }
