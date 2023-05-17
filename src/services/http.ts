@@ -48,6 +48,8 @@ class Http {
       errorTemp = {
         status: -1,
         message: error.message,
+        // @ts-ignore
+        errorMessage: error.response?.data?.message || '',
       };
     }
 

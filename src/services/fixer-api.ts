@@ -766,7 +766,9 @@ export const listAllCurrencies = async () => {
         } as Currency),
     );
     // return data;
-  } catch (error) {}
+  } catch (error) {
+    throw error;
+  }
 };
 
 export const latest = async (
@@ -786,7 +788,9 @@ export const latest = async (
         rate,
       })),
     };
-  } catch (error) {}
+  } catch (error) {
+    throw error;
+  }
 };
 
 const timeseriesMock: { [key: string]: any; rates: { [key: string]: any } } = {
@@ -867,5 +871,7 @@ export const timeseries = async (
         to,
       ]),
     };
-  } catch (error) {}
+  } catch (error) {
+    throw error;
+  }
 };
