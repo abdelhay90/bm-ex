@@ -13,4 +13,4 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 ### `Change API Key`
 
-you can change API key for the fixer API from `.env` file.
+you can change API key for the fixer API from `.env` file and key to change is `REACT_FIXER_API_KEY`.
